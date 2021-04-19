@@ -5,7 +5,7 @@ PmacThreadTest::PmacThreadTest(QWidget *parent)
 {
     ui.setupUi(this);
 	qDebug() << "main thread id" << QThread::currentThreadId();
-
+	//新加了这句话
 	a = new A();
 	a->hello();
 	mypmac = new MyQPmac();
