@@ -11,12 +11,17 @@ public:
 	virtual ~PmacThread();
 	void startPmac();
 	void startPmacHelloTimer();
-
+	void helloPmacthread();
+public slots:
+	void onGetMotorDisp();
 private slots:
 	void onPmacHelloTimer();
+	
+public:
+	MyQPmac * mypmac;
 private:
 	A * a;
-	MyQPmac * mypmac;
+
 	QTimer *pmacHelloTimer;
 };
 

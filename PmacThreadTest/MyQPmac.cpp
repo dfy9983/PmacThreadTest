@@ -47,7 +47,7 @@ double MyQPmac::getMotorDisp()
 {
 	Pmac0->GetResponse(pDeviceNumber, "M162", pAnswer);//获取位移mm
 	double disp = pAnswer.left(pAnswer.length() - 1).toDouble() / 3072 / 8192 * 16;//位移换算
-	qDebug() << "Disp = "<<disp<<endl<<"response thread id:" << QThread::currentThreadId();
+	qDebug() << "Disp = "<<disp <<"  ,response thread id:" << QThread::currentThreadId();
 	return disp;
 }
 

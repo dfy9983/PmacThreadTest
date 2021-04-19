@@ -18,7 +18,7 @@ void PmacThread::startPmac()
 	a->hello();
 	mypmac->getMotorDisp();
 	qDebug() << "start timer";
-	startPmacHelloTimer();
+	//startPmacHelloTimer();
 }
 
 void PmacThread::startPmacHelloTimer()
@@ -26,6 +26,16 @@ void PmacThread::startPmacHelloTimer()
 	pmacHelloTimer = new QTimer(this);
 	connect(pmacHelloTimer, &QTimer::timeout, this, &PmacThread::onPmacHelloTimer);
 	pmacHelloTimer->start(1000);
+}
+
+void PmacThread::helloPmacthread()
+{
+	qDebug() << "hello Pmacthread:" << QThread::currentThreadId();
+}
+
+void PmacThread::onGetMotorDisp()
+{
+	mypmac->getMotorDisp();
 }
 
 void PmacThread::onPmacHelloTimer()

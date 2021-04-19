@@ -9,6 +9,8 @@ class MyQPmac :public QObject
 public:
 	explicit MyQPmac();
 	virtual ~MyQPmac();
+
+public slots:
 	bool creatPmacSelect();
 	double getMotorDisp();
 private:
