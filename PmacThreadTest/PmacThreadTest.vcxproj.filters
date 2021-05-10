@@ -69,5 +69,8 @@
     <ClInclude Include="PmacDeviceLib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Debug\uic\ui_pmacthreadtest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

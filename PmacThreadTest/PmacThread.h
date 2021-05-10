@@ -7,7 +7,8 @@ class PmacThread: public QObject
 {
 	Q_OBJECT
 public:
-	PmacThread(A* a_in, MyQPmac *mypmac_in);
+	explicit PmacThread(A* a_in, MyQPmac *mypmac_in);
+	explicit PmacThread();
 	virtual ~PmacThread();
 	void startPmac();
 	void startPmacHelloTimer();

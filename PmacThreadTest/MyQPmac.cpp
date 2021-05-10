@@ -19,7 +19,7 @@ MyQPmac::~MyQPmac()
 		Pmac0->Close(pDeviceNumber);
 		qDebug() << "Pmac0->Close";
 	}
-	delete Pmac0;
+	//delete Pmac0;//不注释掉这句话wait 线程会卡死
 }
 
 bool MyQPmac::creatPmacSelect()

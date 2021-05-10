@@ -6,9 +6,14 @@ PmacThread::PmacThread(A * a_in, MyQPmac *mypmac_in)
 	mypmac = mypmac_in;
 }
 
+PmacThread::PmacThread()
+{
+
+}
+
 PmacThread::~PmacThread()
 {
-	delete a;
+	//delete a;
 	delete mypmac;
 }
 
@@ -19,6 +24,7 @@ void PmacThread::startPmac()
 	mypmac->getMotorDisp();
 	qDebug() << "start timer";
 	//startPmacHelloTimer();
+	//mypmac->creatPmacSelect();//测试是否可以在多线程创建!widget不可以在非ui线程创建
 }
 
 void PmacThread::startPmacHelloTimer()
